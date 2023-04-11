@@ -4,7 +4,7 @@ Bu proje Kocaeli Üniversitesi Yapay Zeka dersi için yapılmıştır.
 
 ### Hazırlayanlar
 
-*Rumeysa ÜSTÜN*
+*Rumeysa ÜSTÜN*     
 *Sıla Sünber*
 
 
