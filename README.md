@@ -1,4 +1,4 @@
-# <img src="https://github.com/fluidicon.png" width="25" height="25" alt="GitHub icon"/> Reading Braille
+# <img src="https://github.com/fluidicon.png" width="28" height="28" alt="GitHub icon"/> Reading Braille
 
 Bu proje Kocaeli Üniversitesi Yapay Zeka dersi için yapılmıştır.  
 *Konu:* Derin Öğrenme Teknikleri kullanılarak Körler alfabesi (braille alfabesi) okuma 
