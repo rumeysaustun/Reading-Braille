@@ -1,1 +1,0 @@
-python train.py --img 640 --data BrailleAlphabet.yaml --epochs 300 --weights yolov5s6.pt  --batch-size 3
