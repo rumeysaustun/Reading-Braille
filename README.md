@@ -3,7 +3,7 @@
 ###### ***Konu:** Derin Öğrenme Teknikleri kullanılarak Körler alfabesi (braille alfabesi) okuma* 
 
 ###### Hazırlayanlar: *Rumeysa ÜSTÜN*, *Sıla Sünber*
-## <img src="https://github.com/fluidicon.png" width="28" height="28" alt="GitHub icon"/> Braille Alfabesi nedir?
+## <img src="https://https://github.com/rumeysaustun/Reading-Braille/blob/main/img/braille.png" width="28" height="28" alt="GitHub icon"/> Braille Alfabesi nedir?
 
 Braille alfabesi, görme engelli insanlar için geliştirilmiş bir alfabedir. Alfabede, kabartma dokunuşları şeklindeki noktalar kullanılarak harfler, sayılar, noktalama işaretleri ve diğer semboller temsil edilir. Alfabede toplam altı nokta vardır ve bu noktaların farklı kombinasyonları, farklı karakterleri ifade etmek için kullanılır.
 
