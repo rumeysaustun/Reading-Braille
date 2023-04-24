@@ -1,1 +1,0 @@
-python train.py --img 640 --batch 2 --epochs 300 --data tup.yaml --weights yolov5s6.pt
