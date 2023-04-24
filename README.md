@@ -9,4 +9,4 @@ Braille alfabesi, görme engelli insanlar için geliştirilmiş bir alfabedir. A
 
 Braille alfabesi, Fransız Louis Braille tarafından 1824 yılında geliştirilmiştir ve günümüzde dünya çapında birçok ülkede kullanılmaktadır. Braille alfabesi, görme engelli insanların okuma ve yazma becerilerini geliştirmelerine ve dünya ile iletişim kurmalarına yardımcı olur. Ayrıca, braille alfabesi dijital cihazlarda da kullanılabilmekte ve yazılım geliştirme, müzik, matematik gibi birçok alanda da kullanımı yaygındır.
 
-<img src="https://github.com/rumeysaustun/Reading-Braille/blob/main/img/braille_diagram.jpg" width="800" height="500"  alt="GitHub icon"/>
+<img src="https://github.com/rumeysaustun/Reading-Braille/blob/main/img/braille_diagram.jpg" width="800" height="600"  alt="GitHub icon"/>
