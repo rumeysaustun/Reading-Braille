@@ -15,5 +15,5 @@ test:  # 20288 of 40670 images, submit to https://competitions.codalab.org/compe
 
 # Classes
 nc: 26  # number of classes
-names: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']  
+names: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',]  
 # class names

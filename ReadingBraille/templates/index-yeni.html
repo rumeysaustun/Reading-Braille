@@ -1,0 +1,280 @@
+<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<div class="topnav">
+    <a>Braille Çeviriciye Hoş Geldiniz</a>
+  </div>
+<br><br>
+
+<div class="file-upload">
+  <button class="file-upload-btn" type="button" name="image" onclick="$('.file-upload-input').trigger( 'click' )">Resim Ekle</button>
+  <form action="/dosya-ekle" method="post" enctype="multipart/form-data">
+  <div class="image-upload-wrap">
+    <input class="file-upload-input" type='file' name="image" onchange="readURL(this);" accept="image/*" />
+    <div class="drag-text">
+      <h3>Bir dosyayı sürükleyip bırakın veya Resim ekle'yi seçin</h3>
+    </div>
+  </div>
+  
+  <div class="file-upload-content">
+    <img class="file-upload-image" src="#" alt="your image" />
+    <div class="image-title-wrap">
+        
+      <button type="button" onclick="removeUpload()" class="remove-image">Sil <span class="image-title">Resim Ekle</span></button>
+      <button type="submit"  class="upload-image">Yükle <span class="image-title">Resim Ekle</span></button>
+      
+    </div>
+  </div>
+</form>
+</div>
+
+
+
+
+
+<style>
+    .general{
+    max-width: 43.5%;
+    position: relative;
+    margin: auto;
+}
+body {
+  font-family: sans-serif;
+  background-image: url("../static/img/alfabe_b.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.file-upload {
+  background-color: #ffffff;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #1FB264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+  margin-top: 20px;
+  border: 4px dashed #1FB264;
+  position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: #1FB264;
+  border: 4px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #15824B;
+  padding: 60px 0;
+}
+
+.file-upload-image {
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #cd4535;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #b02818;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.upload-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #15824B;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #10683C;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+/*Üst bar yapımı*/
+.topnav {
+  overflow: hidden;
+  background-color: #1e3d50;
+  border-radius: 5px;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  display: block;
+  padding: 10px 20px 10px 50px;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  background-image: url('../static/img/braille_40.png');
+  background-repeat: no-repeat;
+}
+
+a:hover {
+  background-color: #344053;
+}
+</style>
+
+<script>
+function readURL(input) {
+  if (input.files && input.files[0]) {
+
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      $('.image-upload-wrap').hide();
+
+      $('.file-upload-image').attr('src', e.target.result);
+      $('.file-upload-content').show();
+
+      $('.image-title').html(input.files[0].name);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+
+  } else {
+    removeUpload();
+  }
+}
+
+function removeUpload() {
+  $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+  $('.file-upload-content').hide();
+  $('.image-upload-wrap').show();
+}
+
+function uploadImage(){
+   
+    var form = document.getElementById('form');
+    var formData = new FormData(form);
+
+  // XMLHttpRequest nesnesi oluştur ve POST yöntemiyle veriyi gönder
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/dosya-ekle', true);
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      console.log(xhr.responseText);
+    }
+  };
+  xhr.send(formData);
+    
+}
+
+$('.image-upload-wrap').bind('dragover', function () {
+		$('.image-upload-wrap').addClass('image-dropping');
+	});
+	$('.image-upload-wrap').bind('dragleave', function () {
+		$('.image-upload-wrap').removeClass('image-dropping');
+});
+
+
+
+</script>

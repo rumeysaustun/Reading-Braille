@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tespit sonucu</title>
+        <link rel="stylesheet" href="slider.css">
+</head>
+<body>
+    <center><h1>Sonuç</h1></center>
+        <div class="general">
+                     
+            <img src=  "{{ img_path }}">           
+                
+        </div>
+        <script src="slider.js"></script>
+
+</body>
+</html>
+
+<style>
+    body {
+  font-family: sans-serif;
+  background-image: url("../static/img/alfabe_b.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.slider{display: none;}         
+.slider img{border-radius: 15px; width: 590px; height: 400px;}
+.general{
+    max-width: 20%;
+    position: relative;
+    margin: auto;
+}
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: 0px;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}.next {
+float: left;    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: grey;
+  }
+</style>
+
+<script>
+    let a =1;show(a);
+function plus(n){
+    show(a+=n);
+}
+function show(n) {
+    let i;
+    let slideler=document.getElementsByClassName("slider");
+    if(n>slideler.length){a=1}
+    if(n<1){a=slideler.length}
+    for(i=0;i<slideler.length;i++){
+    slideler[i].style.display="none";
+    }  
+    slideler[a -1].style.display="block";
+}
+</script>
+
+
