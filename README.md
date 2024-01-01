@@ -18,6 +18,4 @@ Braille alfabesi, Fransız Louis Braille tarafından 1824 yılında geliştirilm
    <img src="https://github.com/rumeysaustun/Reading-Braille/blob/main/img/braille_diagram.jpg" width="500" height="450" alt="Alfabe icon"/>
 </div>
 
-## Kullanılan teknolojiler
 
-Bu projede görüntü işleme ile 
