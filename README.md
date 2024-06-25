@@ -17,5 +17,23 @@ Braille alfabesi, Fransız Louis Braille tarafından 1824 yılında geliştirilm
 <div align="center">
    <img src="https://github.com/rumeysaustun/Reading-Braille/blob/main/img/braille_diagram.jpg" width="500" height="450" alt="Alfabe icon"/>
 </div>
+----
+## <img src="https://github.com/rumeysaustun/Reading-Braille/blob/main/img/braille.png" width="28" height="28" alt="Alfabe icon"/> Gerekli Kurulumlar
 
+Projeyi çalıştırabilmek için;
+- Python 
+- Miniconda Jupyther Notebook
+- Cuda
+- CuDNN
+- Flask
+- Torch
+kurulumları yapılmalıdır.
+
+-----
+
+## <img src="https://github.com/rumeysaustun/Reading-Braille/blob/main/img/braille.png" width="28" height="28" alt="Alfabe icon"/> Sonuç ve Arayüz 
+
+![image](https://github.com/rumeysaustun/Reading-Braille/assets/59111328/c4fcbd6c-ee11-4383-9ee9-c1ba2712f09b)
+
+![image](https://github.com/rumeysaustun/Reading-Braille/assets/59111328/40ef388f-d51a-47a2-a4b5-9b1354f229a5)
 
